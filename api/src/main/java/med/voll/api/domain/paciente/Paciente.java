@@ -26,7 +26,10 @@ public class Paciente {
     @Embedded
     private Endereco endereco;
 
+    private Boolean ativo;
+
   public Paciente(DadosCadastroPaciente dados) {
+   this.ativo = true;
    this.nome = dados.nome();
    this.cpf = dados.cpf();
    this.email = dados.email();
